@@ -1,0 +1,15 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": false,
+		"declaration": false,
+		"declarationMap": false,
+		"outDir": "./dist",
+		"allowJs": true,
+		"target": "es5",
+		"sourceMap": true,
+		"strict": false,
+		"resolveJsonModule": true
+	},
+	"exclude": ["node_modules"]
+}

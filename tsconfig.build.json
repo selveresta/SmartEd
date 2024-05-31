@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES6",
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+		"noEmitOnError": false,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"jsx": "react",
+		"noEmit": false,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	}
+}
