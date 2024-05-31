@@ -1,5 +1,5 @@
 // src/controllers/authController.ts
-import { User } from "@smarted/shared";
+import { User, UserProfile } from "@smarted/shared";
 import bcrypt from "bcrypt";
 import TokenService from "../services/tokenService";
 import { Request, Response } from "express";
@@ -22,6 +22,7 @@ class AuthController {
 
 			const hashedPassword = await bcrypt.hash(password, 10);
 			const user = await User.create({ username, password: hashedPassword });
+			const profile = await UserProfile.create({ userId: user.id });
 			const token = TokenService.generateToken(username, hashedPassword);
 			res.status(201).json({ token });
 		} catch (error) {

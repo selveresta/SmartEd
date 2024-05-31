@@ -10,7 +10,8 @@ mkdir models
 mkdir controllers 
 cd ..
 cd > Dockerfile
+cd > .gitignore
 
-git init & tsc --init & npm init -y
+tsc --init & npm init -y
 
 
