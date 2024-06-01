@@ -2,6 +2,7 @@
 import { Sequelize } from "sequelize-typescript";
 import { User } from "../../models/user.model";
 import { UserProfile } from "../../models/userProfile.model";
+import { Resource } from "../../models/resources.model";
 
 export class Database {
 	public sequelize: Sequelize;
@@ -20,7 +21,7 @@ export class Database {
 				acquire: config.pool.acquire,
 				idle: config.pool.idle,
 			},
-			models: [User, UserProfile],
+			models: [User, UserProfile, Resource],
 		});
 	}
 }
